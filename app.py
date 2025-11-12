@@ -6,7 +6,7 @@ import numpy as np
 app = dash.Dash(__name__)
 
 app.layout = html.Div([
-    html.H2("3D Grid Visualizer"),
+    html.H2("Venus Surface Mapping"),
     dcc.Textarea(
         id='grid-input',
         value='1,2,3,1,2,3,1,2\n2,1,3,2,1,3,2,1\n3,2,1,3,2,1,3,2\n1,3,2,1,3,2,1,3\n2,1,3,2,1,3,2,1\n3,2,1,3,2,1,3,2\n1,3,2,1,3,2,1,3\n2,1,3,2,1,3,2,1',
@@ -74,4 +74,5 @@ def update_graph(n_clicks, input_text):
         return go.Figure()
 
 if __name__ == '__main__':
+
     app.run(debug=True)
