@@ -10,7 +10,7 @@ app.layout = html.Div([
     dcc.Textarea(
         id='grid-input',
         value='2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2',
-        style={'width': '100%', 'height': '150px'}
+        style={'width': '100%', 'height': '125px'}
     ),
     html.Button('Generate Chart', id='submit-button', n_clicks=0),
     dcc.Graph(id='surface-plot')
@@ -77,6 +77,7 @@ def update_graph(n_clicks, input_text):
 if __name__ == '__main__':
 
     app.run(debug=True)
+
 
 
 
