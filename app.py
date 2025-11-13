@@ -9,7 +9,7 @@ app.layout = html.Div([
     html.H2("Venus Surface Mapping"),
     dcc.Textarea(
         id='grid-input',
-        value='1,2,3,1,2,3,1,2\n2,1,3,2,1,3,2,1\n3,2,1,3,2,1,3,2\n1,3,2,1,3,2,1,3\n2,1,3,2,1,3,2,1\n3,2,1,3,2,1,3,2\n1,3,2,1,3,2,1,3\n2,1,3,2,1,3,2,1',
+        value='2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2\n2,2,2,2,2,2,2,2',
         style={'width': '100%', 'height': '150px'}
     ),
     html.Button('Generate Chart', id='submit-button', n_clicks=0),
@@ -59,12 +59,13 @@ def update_graph(n_clicks, input_text):
                     ticktext=['8', '7', '6', '5', '4', '3', '2', '1']  # Reversed so front is row 1
                 ),
                 zaxis=dict(
-                    range=[0, 3],
+                    range=[0, 3.9],
                     tickmode='array',
                     tickvals=[1, 2, 3],
                     ticktext=['1', '2', '3']
                 )
             ),
+            height=900,   # Taller window (most important for bottom clipping)
             margin=dict(l=0, r=0, b=0, t=10)
         )
 
@@ -76,3 +77,4 @@ def update_graph(n_clicks, input_text):
 if __name__ == '__main__':
 
     app.run(debug=True)
+
