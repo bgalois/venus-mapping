@@ -65,7 +65,8 @@ def update_graph(n_clicks, input_text):
                     ticktext=['1', '2', '3']
                 )
             ),
-            margin=dict(l=0, r=0, b=0, t=10)
+            margin=dict(l=0, r=0, b=0, t=10),
+            height=400  # Optional: taller window
         )
 
         return fig
@@ -76,6 +77,7 @@ def update_graph(n_clicks, input_text):
 if __name__ == '__main__':
 
     app.run(debug=True)
+
 
 
 
