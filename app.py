@@ -65,7 +65,6 @@ def update_graph(n_clicks, input_text):
                     ticktext=['1', '2', '3']
                 )
             ),
-            height=450,   # Taller window (most important for bottom clipping)
             margin=dict(l=0, r=0, b=0, t=10)
         )
 
@@ -77,6 +76,7 @@ def update_graph(n_clicks, input_text):
 if __name__ == '__main__':
 
     app.run(debug=True)
+
 
 
 
